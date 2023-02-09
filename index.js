@@ -141,8 +141,9 @@ app.get("/", async (request, response) => {
     const query = gql`
     {
         websites{
-          name
           id
+          name
+          ownerId
         }
     }`;
     const results = await graphQLClient.request(query);
